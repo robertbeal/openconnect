@@ -21,7 +21,7 @@ RUN echo "http://dl-4.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositor
 	
 	&& git clone https://github.com/dlenski/openconnect.git \
 	&& cd openconnect \
-	&& git checkout 7a420ca8c70655c2605600a5769d5b0fb1fb164c \
+	&& git checkout 4ed81ced12581b51616adb085c71586e5fb5e66b \
 	&& ./autogen.sh \
 	&& ./configure --with-vpnc-script=/etc/vpnc/vpnc-script --without-openssl-version-check \
 	&& make install \
