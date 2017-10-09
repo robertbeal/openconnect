@@ -30,7 +30,8 @@ RUN echo "http://dl-4.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositor
 RUN apk add --no-cache \
 		openssl \
 		libxml2 \
+		tini \
 		vpnc
 
-ENTRYPOINT ["/usr/local/sbin/openconnect"]
-CMD ["--help"]
+COPY entrypoint.sh /usr/local/bin
+ENTRYPOINT ["/sbin/tini", "--", "entrypoint.sh"]
