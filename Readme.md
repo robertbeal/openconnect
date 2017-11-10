@@ -17,8 +17,10 @@ docker run \
 	--name openconnect \
 	--net host \
 	--read-only \
+        --tmpfs /var/run/vpnc \
 	--cap-add=NET_ADMIN \
 	--device /dev/net/tun \
+        -v /etc/resolv.conf:/etc/resolv.conf \
         -e ARGS="--protocol=gp <ip> --servercert sha256:<sha>" \
 	-it robertbeal/openconnect:latest
 ```
