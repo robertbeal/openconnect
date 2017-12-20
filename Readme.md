@@ -20,6 +20,9 @@ docker run \
         --tmpfs /var/run/vpnc \
 	--cap-add=NET_ADMIN \
 	--device /dev/net/tun \
+        --pids-limit 50 \
+        --cpus="1" \
+        --memory="256m" \
         -v /etc/resolv.conf:/etc/resolv.conf \
         -e ARGS="--protocol=gp <ip> --servercert sha256:<sha>" \
 	-it robertbeal/openconnect:latest
