@@ -30,7 +30,7 @@ RUN apk add --no-cache \
     openssl \
     libxml2 \
     tini \
-    vpnc
+    vpnc \
   && sed -i '/$IPROUTE route flush cache/d' /etc/vpnc/vpnc-script
 
 COPY entrypoint.sh /usr/local/bin
