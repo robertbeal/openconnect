@@ -31,7 +31,8 @@ RUN apk add --no-cache \
     libxml2 \
     tini \
     vpnc \
-  && sed -i '/$IPROUTE route flush cache/d' /etc/vpnc/vpnc-script
+  && sed -i '/$IPROUTE route flush cache/d' /etc/vpnc/vpnc-script \
+  && mkdir /var/run/vpnc
 
 COPY entrypoint.sh /usr/local/bin
 ENTRYPOINT ["/sbin/tini", "--", "entrypoint.sh"]
