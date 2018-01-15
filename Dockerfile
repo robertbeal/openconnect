@@ -1,4 +1,5 @@
 FROM alpine:3.7
+MAINTAINER Robert Beal <rob@kohi.uk>
 
 WORKDIR /tmp
 
