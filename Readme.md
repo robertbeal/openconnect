@@ -17,7 +17,7 @@ docker run \
     --name openconnect \
     --net host \
     --read-only \
-    --tmpfs /var/run/vpnc \
+    --tmpfs /var/run/vpnc:rw,size=1000k \
     --cap-add=NET_ADMIN \
     --device /dev/net/tun \
     --pids-limit 50 \
