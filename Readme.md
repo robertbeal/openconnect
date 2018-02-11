@@ -10,8 +10,6 @@ Built from https://github.com/dlenski/openconnect to get the additional Palo Alt
 
 The below example uses `--read-only` mode (for a tiny bit of additional security, you must include the `--tmpfs` parameter if using read-only mode). You will get errors that it can't flush or backup resolv.conf (both part of the vpnc script) but it all still works just fine. 
 
-Use `-e ARGS=` for passing in command line parameters to OpenConnect.
-
 ```
 docker run \
     --name openconnect \
@@ -24,8 +22,7 @@ docker run \
     --cpus="1" \
     --memory="256m" \
     -v /etc/resolv.conf:/etc/resolv.conf \
-    -e ARGS="--protocol=gp <ip> --servercert sha256:<sha>" \
     --interactive \
     --tty \
-    robertbeal/openconnect:latest
+    robertbeal/openconnect:latest openconnect --protocol=gp <ip> --servercert sha256:<sha>
 ```
