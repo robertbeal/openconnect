@@ -22,6 +22,7 @@ docker run \
     --cpus="1" \
     --memory="256m" \
     -v /etc/resolv.conf:/etc/resolv.conf \
+    --security-opt="no-new-privileges:true" \
     --interactive \
     --tty \
     robertbeal/openconnect:latest --protocol=gp <ip> --servercert sha256:<sha>
