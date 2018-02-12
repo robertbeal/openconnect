@@ -24,5 +24,5 @@ docker run \
     -v /etc/resolv.conf:/etc/resolv.conf \
     --interactive \
     --tty \
-    robertbeal/openconnect:latest openconnect --protocol=gp <ip> --servercert sha256:<sha>
+    robertbeal/openconnect:latest --protocol=gp <ip> --servercert sha256:<sha>
 ```

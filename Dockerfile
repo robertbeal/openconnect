@@ -34,4 +34,4 @@ RUN echo "http://dl-4.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositor
 
 COPY entrypoint.sh /usr/local/bin
 ENTRYPOINT ["/sbin/tini", "--", "entrypoint.sh"]
-CMD ["/usr/local/sbin/openconnect"]
+CMD ["--help"]
