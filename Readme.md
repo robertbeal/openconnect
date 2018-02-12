@@ -20,7 +20,7 @@ docker run \
     --device /dev/net/tun \
     --pids-limit 50 \
     --cpus="1" \
-    --memory="256m" \
+    --memory="512m" \
     -v /etc/resolv.conf:/etc/resolv.conf \
     --security-opt="no-new-privileges:true" \
     --interactive \
