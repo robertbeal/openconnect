@@ -2,4 +2,10 @@
 
 set -e
 cp /etc/resolv.conf /var/run/vpnc/resolv.conf-backup
-exec /usr/local/sbin/openconnect "$@" $ARGS
+
+if [ ! -z "$ARGS" ]; 
+then
+    exec /usr/local/sbin/openconnect $ARGS
+else
+    exec /usr/local/sbin/openconnect "$@"
+fi
