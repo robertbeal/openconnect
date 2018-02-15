@@ -8,7 +8,7 @@
 
 Built from https://github.com/dlenski/openconnect to get the additional Palo Alto Networks (PAN) authentication mode.
 
-The below example uses `--read-only` mode (for a tiny bit of additional security, you must include the `--tmpfs` parameter if using read-only mode). You will get errors that it can't flush or backup resolv.conf (both part of the vpnc script) but it all still works just fine. 
+The below example uses `--read-only` mode (for a tiny bit of additional security, you must include the `--tmpfs` parameter if using read-only mode).
 
 ```
 docker run \
