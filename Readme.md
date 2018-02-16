@@ -28,6 +28,8 @@ docker run \
     robertbeal/openconnect:latest --protocol=gp <ip> --servercert sha256:<sha>
 ```
 
+## Small Issue
+
 SIGTERM works (ie `docker stop openconnect`) but not in an elegant fashion. The `vpnc-script` doesn't revert the /etc/resolv.conf so you may find your hosts `/etc/resolv.conf` is left in a messy state. When I have time I need to find out why openconnect isn't shutting down cleanly. 
 
 SIGINIT (ie `ctrl+c`) however does fully work.
