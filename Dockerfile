@@ -27,11 +27,10 @@ RUN echo "http://dl-4.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositor
   && apk add --no-cache \
     openssl \
     libxml2 \
-    tini \
     vpnc \
   && sed -i '/$IPROUTE route flush cache/d' /etc/vpnc/vpnc-script \
   && mkdir /var/run/vpnc
 
 COPY entrypoint.sh /usr/local/bin
-ENTRYPOINT ["/sbin/tini", "--", "entrypoint.sh"]
+ENTRYPOINT ["entrypoint.sh"]
 CMD ["--help"]

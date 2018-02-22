@@ -13,6 +13,7 @@ The below example uses `--read-only` mode (for a tiny bit of additional security
 ```
 docker run \
     --name openconnect \
+    --init \
     --net host \
     --read-only \
     --tmpfs /var/run/vpnc:rw,size=1000k \
