@@ -2,7 +2,7 @@ FROM alpine:3.7
 MAINTAINER Robert Beal <rob@kohi.uk>
 
 RUN echo "http://dl-4.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories \
-  && apk add --update --no-cache --virtual=build-dependencies \ 
+  && apk add --update --no-cache --virtual=build-dependencies \
     automake \
     autoconf \
     gcc \
@@ -18,7 +18,7 @@ RUN echo "http://dl-4.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositor
     vpnc \
   && git clone https://github.com/dlenski/openconnect.git /tmp/openconnect \
   && cd /tmp/openconnect \
-  && git checkout f9c36b4afcf29098989b9138272b40f60cc4acd5 \
+  && git checkout bfaba1b2ba2777f2495251e3870e5e88b5275fcc \
   && ./autogen.sh \
   && ./configure --with-vpnc-script=/etc/vpnc/vpnc-script --without-openssl-version-check \
   && make install \
