@@ -6,7 +6,7 @@
 [![](https://img.shields.io/docker/stars/robertbeal/openconnect.svg)](https://hub.docker.com/r/robertbeal/openconnect/)
 [![](https://img.shields.io/docker/automated/robertbeal/openconnect.svg)](https://hub.docker.com/r/robertbeal/openconnect/)
 
-Built from https://github.com/dlenski/openconnect to get the additional Palo Alto Networks (PAN) authentication mode.
+Now built from OpenConnect v8 which includes out-of-the-box support for Palo Alto Networks (PAN) authentication mode.
 
 The below example uses `--read-only` mode (for a tiny bit of additional security, you must include the `--tmpfs` parameter if using read-only mode).
 
